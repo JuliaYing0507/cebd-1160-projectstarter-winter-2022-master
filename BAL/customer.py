@@ -4,12 +4,12 @@ dta = d.DB()
 
 
 def get_all_customers():
-    return dta.execute_select_query("Customer")
+    return dta.execute_select_query("Sales", "Customer")
 
 
 def get_customer(_id: int):
-    return dta.execute_select_query("Customer", params={'Id': _id})
+    return dta.execute_select_query("Sales", "Customer", params={'Id': _id})
 
 
 def get_customer_by_last_name(_name: str):
-    return dta.execute_select_query("Customer", params={'Last_Name': _name})
+    return dta.execute_select_query("Sales", "Customer", params={'Last_Name': _name})
